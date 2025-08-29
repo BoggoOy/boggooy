@@ -3,12 +3,16 @@ import BoggoLogo from "./BoggoLogo";
 
 export default function Navbar() {
   return (
-    <header className="">
-      <Link href="/" className="" aria-label="Logo and back to home button">
-        <BoggoLogo />
+    <header className="flex items-center fixed top-0 left-0 w-screen p-4 z-10 gap-[1em]">
+      <Link
+        href="/"
+        className="flex-1"
+        aria-label="Logo and back to home button"
+      >
+        <BoggoLogo height={30} width={100} />
       </Link>
 
-      <div className="flex flex-col">
+      <div className="flex-2 flex-col justify-between">
         <nav className="">
           <Link
             href="/about"
@@ -44,6 +48,8 @@ export default function Navbar() {
           </Link>
         </nav>
       </div>
+
+      <p>Oulu, FI</p>
     </header>
   );
 }
