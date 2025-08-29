@@ -1,6 +1,6 @@
 "use client";
 import { useRevealer } from "@/hooks/useRevealer";
-export default function Home() {
+export default function About() {
   const { revealer } = useRevealer();
   return (
     <>
@@ -10,7 +10,7 @@ export default function Home() {
       />
       <main>
         <h1 className="text-4xl font-bold text-center mt-20">
-          Welcome to the Home Page
+          Welcome to the About Page
         </h1>
       </main>
     </>
