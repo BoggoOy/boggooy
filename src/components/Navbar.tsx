@@ -49,12 +49,12 @@ export default function Navbar() {
     };
 
   return (
-    <header className="flex fixed top-0 left-0 w-screen z-10 gap-[1em] items-start">
-      <div className="flex-1 w-full mx-auto flex items-center gap-6">
+    <header className="flex fixed top-0 left-0 w-screen z-10 gap-[1em] items-start p-5">
+      <div className="flex w-full mx-auto items-center gap-6">
         <div className="flex-1 w-fit">
           <Link
             href="/"
-            aria-label="Siirry etusivulle"
+            aria-label="Move back to home"
             rel="home"
             className="inline-flex items-center"
             onClick={handleNavigation("/")}
@@ -70,7 +70,7 @@ export default function Navbar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className=""
+                  className="underline"
                   aria-label={`${item.name} page`}
                   aria-description={item.description}
                   onClick={handleNavigation(item.href)}

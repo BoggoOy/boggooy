@@ -1,11 +1,5 @@
 @import "tailwindcss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --background: #f8f8f8;
   --foreground: #1a1a1a;
@@ -30,7 +24,6 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist), var(--font-mono), Arial, Helvetica, sans-serif;
 }
 
 ::view-transition-old(root),
