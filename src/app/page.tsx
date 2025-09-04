@@ -9,9 +9,15 @@ export default function Home() {
         className="fixed top-0 left-0 w-screen h-svh pointer-events-none z-20 bg-foreground origin-[center_top]"
       />
       <main>
-        <h1 className="text-4xl font-bold text-center mt-20">
-          Welcome to the Home Page
-        </h1>
+        <section className="flex flex-col items-center justify-center min-h-dvh text-center px-5">
+          <h2 className="uppercase font-mono absolute">
+            [digital solutions coming soon]
+          </h2>
+        </section>
+
+        <section className="flex flex-col items-center justify-center min-h-dvh text-center px-5">
+          <h1 className="text-4xl font-bold">Welcome to the Home Page</h1>
+        </section>
       </main>
     </>
   );
