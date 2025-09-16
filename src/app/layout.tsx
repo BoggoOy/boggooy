@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ViewTransitions } from "next-view-transitions";
+import { ContactProvider } from "@/hooks/useContact";
 
 const geist = localFont({
   src: "../../public/fonts/Geist.ttf",
@@ -38,8 +39,10 @@ export default function RootLayout({
         <body
           className={`${geist.variable} ${geistMono.variable} ${geistItalic.variable} ${geistMonoItalic.variable} antialiased`}
         >
-          {/* <Navbar /> */}
-          {children}
+          <ContactProvider>
+            {/* <Navbar /> */}
+            {children}
+          </ContactProvider>
         </body>
       </html>
     </ViewTransitions>

@@ -1,0 +1,7 @@
+export const ICONS = {
+  ICON_SMALL: 16,
+  ICON_MEDIUM: 24,
+  ICON_LARGE: 32,
+  ICON_XLARGE: 48,
+  ICON_XXLARGE: 64,
+};
