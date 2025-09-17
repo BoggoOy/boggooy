@@ -8,7 +8,7 @@ import React from "react";
 export default function Home() {
   const { revealer } = useRevealer();
   return (
-    <main aria-label="Home Page" className="relative min-h-dvh px-5">
+    <main id="main" className="relative min-h-dvh px-5">
       <div
         aria-hidden="true"
         ref={revealer}
@@ -19,14 +19,14 @@ export default function Home() {
         <WaveParticles />
         {/* Hero / Intro */}
         <div className="max-w-[1450px] mb-20">
-          <h2 className="font-geist text-[clamp(1.6rem,7vw,4.6rem)] leading-[1.05] sm:indent-[2em] overflow-hidden hyphens-auto sm:hyphens-none">
+          <h1 className="font-geist text-[clamp(1.6rem,7vw,4.6rem)] leading-[1.05] sm:indent-[2em] overflow-hidden hyphens-auto sm:hyphens-none">
             Design and development create scalable digital solutions centered on{" "}
             <span className="font-black italic">humans.</span>
-          </h2>
+          </h1>
         </div>
 
         {/* Grid section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           <div className="flex flex-col w-fit gap-px text-[clamp(0.85rem,1.2vw,1rem)] text-[--foreground] font-mono">
             <a
               href="mailto:hello@boggo.fi"
@@ -45,7 +45,6 @@ export default function Home() {
             className="relative flex gap-2 items-center font-mono uppercase cursor-pointer w-fit px-6 py-3 group hover:text-black"
             onClick={() => {}}
           >
-            {/* SVG Ellipse taustalle */}
             <svg
               className="absolute inset-0 w-full h-full pointer-events-none"
               viewBox="0 0 200 68"
@@ -67,10 +66,18 @@ export default function Home() {
             <p className="relative z-10">Contact</p>
             <ArrowRight className="relative z-10" size={ICONS.ICON_MEDIUM} />
           </button>
-        </div>
+        </div> */}
 
-        <div className="absolute right-0 bottom-5">
-          <h4 className="max-w-[30em] font-geist">
+        {/* Description text */}
+        <div className="absolute bottom-5 flex flex-col sm:flex-row gap-3 justify-between w-full sm:items-center">
+          <div className="flex flex-col text-right sm:text-left font-geist sm:max-w-[30em] text-[clamp(0.7rem,2vw,1.1rem)] whitespace-nowrap">
+            <p className="">Based in Oulu, Finland</p>
+            <p className="text-neutral-500 text-[clamp(0.65rem,1.8vw,1rem)]">
+              Born in passion
+            </p>
+          </div>
+
+          <h4 className="sm:max-w-[30em] font-geist text-[clamp(0.7rem,3vw,1.1rem)] leading-tight sm:leading-normal text-left sm:text-right">
             We create high-quality, human-centered software and applications,
             bringing your ideas to life in unforgettable ways.
           </h4>
