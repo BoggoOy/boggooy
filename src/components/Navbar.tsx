@@ -49,7 +49,7 @@ export default function Navbar() {
     };
 
   return (
-    <header className="flex fixed top-0 left-0 w-screen z-10 gap-[1em] items-start p-5">
+    <header className="flex fixed top-0 left-0 w-screen z-50 gap-[1em] items-start p-5">
       <div className="flex w-full mx-auto items-center gap-6">
         <div className="flex-1 w-fit">
           <Link
@@ -70,7 +70,7 @@ export default function Navbar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="underline"
+                  className="underline uppercase mix-blend-color"
                   aria-label={`${item.name} page`}
                   aria-description={item.description}
                   onClick={handleNavigation(item.href)}

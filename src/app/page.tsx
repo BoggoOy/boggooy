@@ -14,16 +14,14 @@ export default function Home() {
         ref={revealer}
         className="fixed top-0 left-0 w-screen h-svh pointer-events-none z-20 bg-foreground origin-[center_top]"
       />
-      <section className="min-h-svh">
+      <section className="min-h-dvh grid grid-rows-2 pt-40 mb-20 relative">
         {/* WaveParticles wrapper */}
-        <div className="absolute left-0 top-0 right-0 mx-auto pointer-events-none -z-50 opacity-20">
-          <WaveParticles />
-        </div>
+        <WaveParticles />
         {/* Hero / Intro */}
         <div className="max-w-[1450px] mb-20">
-          <h2 className="font-geist text-[clamp(1.6rem,7vw,4.6rem)] leading-[1.05] indent-[2em]">
-            Design and development create scalable digital solut&shy;ions
-            centered on <span className="font-black italic">humans.</span>
+          <h2 className="font-geist text-[clamp(1.6rem,7vw,4.6rem)] leading-[1.05] sm:indent-[2em] overflow-hidden hyphens-auto sm:hyphens-none">
+            Design and development create scalable digital solutions centered on{" "}
+            <span className="font-black italic">humans.</span>
           </h2>
         </div>
 
@@ -71,15 +69,14 @@ export default function Home() {
           </button>
         </div>
 
-        <div>
-          <h4 className="max-w-[600px] mt-20 font-geist">
-            We create high-quality and human-oriented software and applications.
-            We bring your ideas to life with colors and functionality that leave
-            a lasting impression.
+        <div className="absolute right-0 bottom-5">
+          <h4 className="max-w-[30em] font-geist">
+            We create high-quality, human-centered software and applications,
+            bringing your ideas to life in unforgettable ways.
           </h4>
         </div>
       </section>
-      {/* <section className="min-h-svh bg-amber-100"></section> */}
+      <section className="min-h-svh bg-amber-100"></section>
     </main>
   );
 }
