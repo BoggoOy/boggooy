@@ -40,26 +40,26 @@ export function ServiceDropDown({
     }
   }, [isOpen]);
 
-  // GSAP hover tausta
-  const handleMouseEnter = () => {
-    if (sectionRef.current) {
-      gsap.to(sectionRef.current, {
-        backgroundColor: "#fff",
-        duration: 0.3,
-        ease: "power2.out",
-      });
-    }
-  };
+  // // GSAP hover tausta
+  // const handleMouseEnter = () => {
+  //   if (sectionRef.current) {
+  //     gsap.to(sectionRef.current, {
+  //       backgroundColor: "#fff",
+  //       duration: 0.3,
+  //       ease: "power2.out",
+  //     });
+  //   }
+  // };
 
-  const handleMouseLeave = () => {
-    if (sectionRef.current) {
-      gsap.to(sectionRef.current, {
-        backgroundColor: "transparent",
-        duration: 0.3,
-        ease: "power2.in",
-      });
-    }
-  };
+  // const handleMouseLeave = () => {
+  //   if (sectionRef.current) {
+  //     gsap.to(sectionRef.current, {
+  //       backgroundColor: "transparent",
+  //       duration: 0.3,
+  //       ease: "power2.in",
+  //     });
+  //   }
+  // };
 
   return (
     <section
@@ -67,8 +67,6 @@ export function ServiceDropDown({
       className="border-t cursor-pointer py-5"
       aria-label={title}
       onClick={onToggle}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
       aria-expanded={isOpen}
       aria-controls={`service-title-${title}`}
     >
@@ -87,7 +85,7 @@ export function ServiceDropDown({
           overflow: "hidden",
           opacity: 0,
         }}
-        className="text-neutral-50 text-base max-w-[450px] mt-2"
+        className="text-neutral-50 text-[clamp(0.6rem,5vw,1.2rem)] mt-2 hyphens-auto"
         aria-hidden={!isOpen}
       >
         {description}

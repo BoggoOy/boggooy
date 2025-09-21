@@ -110,7 +110,7 @@ export default function Home() {
           Services
         </h2>
         <div className="space-y-20">
-          <p className="text-[clamp(1.1rem,5vw,1.6rem)] leading-[1.05]">
+          <p className="text-[clamp(1.1rem,5vw,1.6rem)] leading-[1.05] mt-5 lg:mt-auto hyphens-auto">
             Our team is a highly collaborative group of stars that enjoys
             working together and learning from each other. We believe that the
             best solutions come from diverse perspectives and experiences, and
