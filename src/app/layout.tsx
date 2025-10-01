@@ -1,26 +1,25 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+// @ts-expect-error: side-effect CSS import without explicit module declarations
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import { ViewTransitions } from "next-view-transitions";
-import { ContactProvider } from "@/hooks/useContact";
+import Footer from "@/components/Footer/Footer";
 
 const geist = localFont({
   src: "../../public/fonts/Geist.ttf",
-  variable: "--font-geist",
+  variable: "--geist",
 });
 const geistItalic = localFont({
   src: "../../public/fonts/GeistItalic.ttf",
-  variable: "--font-geist-italic",
+  variable: "--geist-italic",
 });
 
 const geistMono = localFont({
   src: "../../public/fonts/GeistMono.ttf",
-  variable: "--font-geist-mono",
+  variable: "--geist-mono",
 });
 const geistMonoItalic = localFont({
   src: "../../public/fonts/GeistMonoItalic.ttf",
-  variable: "--font-geist-mono-italic",
+  variable: "--geist-mono-italic",
 });
 
 export const metadata: Metadata = {
@@ -34,17 +33,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
-      <html lang="en">
-        <body
-          className={`${geist.variable} ${geistMono.variable} ${geistItalic.variable} ${geistMonoItalic.variable} antialiased`}
-        >
-          <ContactProvider>
-            {/* <Navbar /> */}
-            {children}
-          </ContactProvider>
-        </body>
-      </html>
-    </ViewTransitions>
+    <html lang="en">
+      <body
+        className={`${geist.variable} ${geistMono.variable} ${geistItalic.variable} ${geistMonoItalic.variable} antialiased scroll-smooth`}
+      >
+        {children}
+      </body>
+    </html>
   );
 }

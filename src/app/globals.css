@@ -1,54 +1,76 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8f8f8;
-  --foreground: #1a1a1a;
+  /* Background */
+  --main-background: #171717;
+  /* Colors */
 }
 body::-webkit-scrollbar {
   display: none;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-mono: var(--font-geist-mono);
-  --font-mono-italic: var(--font-geist-mono-italic);
-  --font-geist: var(--font-geist);
-  --font-geist-italic: var(--font-geist-italic);
+  /* Colors */
+  --color-main: #171717;
+
+  /* Font */
+  --font-geist: var(--geist);
+  --font-geist-italic: var(--geist-italic);
+  --font-geist-mono: var(--geist-mono);
+  --font-geist-mono-italic: var(--geist-mono-italic);
+  /* Fluid Sizing & Spacing */
+
+  /* Fluid Font Sizing */
+  --step--2: clamp(0.7813rem, 0.7043rem + 0.3849vw, 1.12rem);
+  --step--1: clamp(0.9375rem, 0.8324rem + 0.5256vw, 1.4rem);
+  --step-0: clamp(1.125rem, 0.983rem + 0.7102vw, 1.75rem);
+  --step-1: clamp(1.35rem, 1.1597rem + 0.9517vw, 2.1875rem);
+  --text-title: clamp(1.62rem, 1.3667rem + 1.2663vw, 2.7344rem);
+  --text-2: clamp(1.944rem, 1.609rem + 1.675vw, 3.418rem);
+  --step-4: clamp(2.3328rem, 1.892rem + 2.2042vw, 4.2725rem);
+  --text-header: clamp(2.7994rem, 2.2218rem + 2.8877vw, 5.3406rem);
+
+  /* Fluid Font Sizing Mobile */
+  --text-title-mobile: clamp(12px, 7.1vw, min(6.67vh, 28px));
+
+  /* Fluid Sizing & Spacing */
+  --spacing-3xs: clamp(0.3125rem, 0.2841rem + 0.142vw, 0.4375rem);
+  --spacing-2xs: clamp(0.5625rem, 0.4915rem + 0.3551vw, 0.875rem);
+  --spacing-xs: clamp(0.875rem, 0.7756rem + 0.4972vw, 1.3125rem);
+  --spacing-s: clamp(1.125rem, 0.983rem + 0.7102vw, 1.75rem);
+  --spacing-m: clamp(1.6875rem, 1.4744rem + 1.0653vw, 2.625rem);
+  --spacing-l: clamp(2.25rem, 1.9659rem + 1.4205vw, 3.5rem);
+  --spacing-xl: clamp(3.375rem, 2.9489rem + 2.1307vw, 5.25rem);
+  --spacing-2xl: clamp(4.5rem, 3.9318rem + 2.8409vw, 7rem);
+  --spacing-3xl: clamp(6.75rem, 5.8977rem + 4.2614vw, 10.5rem);
 }
 
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--main-background);
+}
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox, Safari 18.2+, Chromium 121+ */
+}
+
+/* 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1a1a1a;
-    --foreground: #f8f8f8;
+    --background: #0a0a0a;
+    --foreground: #ededed;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-}
-
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation: none !important;
-}
-
-::view-transition-group(root) {
-  z-index: auto !important;
-}
-
-::view-transition-image-pair(root) {
-  isolation: isolate;
-  will-change: clip-path;
-  z-index: 1;
-}
-::view-transition-new(root) {
-  z-index: 10000;
-  animation: none !important;
-}
-
-::view-transition-old(root) {
-  z-index: 1;
-  animation: none !important;
-}
+  font-family: Arial, Helvetica, sans-serif;
+} */
