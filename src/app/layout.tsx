@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-// @ts-expect-error: side-effect CSS import without explicit module declarations
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
 
