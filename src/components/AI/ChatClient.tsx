@@ -62,7 +62,7 @@ export default function ChatClient({
               "Content-Type": "application/json",
               "X-Shared-Secret":
                 process.env.NEXT_PUBLIC_AI_API_SECRET_KEY || "",
-              Origin: "https://ai.boggo.fi",
+              Origin: "https://boggo.fi",
             },
             body: JSON.stringify({
               model: selectedModel,
