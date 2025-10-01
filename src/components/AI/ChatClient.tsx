@@ -47,57 +47,40 @@ export default function ChatClient({
 
   const sendMessage = useCallback(
     async (userMessage: Message, history: Message[]) => {
-      const apiBase = process.env.NEXT_PUBLIC_AI_API_URL?.replace(/\/+$/, ""); // poista trailing slash
-      if (!apiBase) {
-        setMessages((prev) => [
-          ...prev,
-          {
-            id: crypto.randomUUID(),
-            role: "assistant",
-            content: "Virhe: NEXT_PUBLIC_AI_API_URL puuttuu.",
-            timestamp: new Date(),
-          },
-        ]);
-        return;
-      }
-
       try {
+        // Sisällytä myös uusin viesti payloadiin
         const payloadMessages = [...history, userMessage].map((m) => ({
           role: m.role,
           content: m.content,
         }));
 
-        const res = await fetch(`${apiBase}/v1/chat/completions`, {
-          method: "POST",
-          mode: "cors", // tärkeä selaimessa
-          headers: {
-            "Content-Type": "application/json",
-            "X-Shared-Secret": process.env.NEXT_PUBLIC_AI_API_SECRET_KEY || "",
-            // ÄLÄ lisää "Origin" headeria – selain hoitaa sen automaattisesti
-          },
-          body: JSON.stringify({
-            model: selectedModel,
-            messages: payloadMessages,
-            max_tokens: 512,
-            // stream: true,  // jos haluat streamauksen myöhemmin
-          }),
-        });
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_AI_API_URL}/v1/chat/completions`,
+          {
+            method: "POST",
+            mode: "cors",
+            headers: {
+              "Content-Type": "application/json",
+              "X-Shared-Secret":
+                process.env.NEXT_PUBLIC_AI_API_SECRET_KEY || "",
+            },
+            body: JSON.stringify({
+              model: selectedModel,
+              messages: payloadMessages,
+              max_tokens: 512,
+            }),
+          }
+        );
 
         if (!res.ok) {
-          let detail = "";
-          try {
-            const errJson = await res.json();
-            detail = errJson?.error?.message || JSON.stringify(errJson);
-          } catch {
-            detail = await res.text().catch(() => "");
-          }
+          const detail = await res.text().catch(() => "");
           throw new Error(`API ${res.status} ${detail}`);
         }
 
         const data = await res.json();
         const reply =
-          data?.choices?.[0]?.message?.content ??
-          data?.choices?.[0]?.text ??
+          data?.choices?.[0]?.message?.content ||
+          data?.choices?.[0]?.text ||
           "(no reply)";
 
         setMessages((prev) => [
@@ -109,13 +92,13 @@ export default function ChatClient({
             timestamp: new Date(),
           },
         ]);
-      } catch (e: unknown) {
+      } catch {
         setMessages((prev) => [
           ...prev,
           {
             id: crypto.randomUUID(),
             role: "assistant",
-            content: `Error: ${e ?? "fetch failed"}`,
+            content: "Error fetching response. Try again.",
             timestamp: new Date(),
           },
         ]);
