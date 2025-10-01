@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const geist = localFont({
   src: "../../public/fonts/Geist.ttf",
@@ -37,6 +38,7 @@ export default function RootLayout({
         className={`${geist.variable} ${geistMono.variable} ${geistItalic.variable} ${geistMonoItalic.variable} antialiased scroll-smooth`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
