@@ -3,6 +3,8 @@
 :root {
   /* Background */
   --main-background: #171717;
+  --main-background-secondary: #1d1d1d;
+
   /* Colors */
 }
 body::-webkit-scrollbar {
@@ -12,7 +14,7 @@ body::-webkit-scrollbar {
 @theme inline {
   /* Colors */
   --color-main: #171717;
-
+  --color-main-secondary: #1d1d1d;
   /* Font */
   --font-geist: var(--geist);
   --font-geist-italic: var(--geist-italic);
@@ -31,7 +33,7 @@ body::-webkit-scrollbar {
   --text-header: clamp(2.7994rem, 2.2218rem + 2.8877vw, 5.3406rem);
 
   /* Fluid Font Sizing Mobile */
-  --text-title-mobile: clamp(12px, 7.1vw, min(6.67vh, 28px));
+  --text-title-mobile: clamp(12px, 7.1vw, min(6.67vh, 46px));
 
   /* Fluid Sizing & Spacing */
   --spacing-3xs: clamp(0.3125rem, 0.2841rem + 0.142vw, 0.4375rem);
