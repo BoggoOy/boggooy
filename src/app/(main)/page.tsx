@@ -20,7 +20,7 @@ export default function Home() {
         </h1>
       </section> */}
       <h1 className="text-white font-geist text-header font-light leading-[1.05] sm:indent-[2em] max-w-[25ch] overflow-hidden">
-        DIGITAL SOLUTION COMING SOON
+        DIGITAL SOLUTIONS COMING SOON
       </h1>
     </main>
   );
