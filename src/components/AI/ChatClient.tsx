@@ -58,16 +58,15 @@ export default function ChatClient({
           `${process.env.NEXT_PUBLIC_AI_API_URL}/v1/chat/completions`,
           {
             method: "POST",
+            mode: "cors",
             headers: {
               "Content-Type": "application/json",
               "X-Shared-Secret":
                 process.env.NEXT_PUBLIC_AI_API_SECRET_KEY || "",
-              Origin: "https://ai.boggo.fi",
             },
             body: JSON.stringify({
               model: selectedModel,
               messages: payloadMessages,
-              // (tarvittaessa parametreja lisää)
               max_tokens: 512,
             }),
           }
