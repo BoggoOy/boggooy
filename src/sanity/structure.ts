@@ -1,3 +1,4 @@
+import { LinkIcon } from "@sanity/icons";
 import type { StructureResolver } from "sanity/structure";
 
 // https://www.sanity.io/docs/structure-builder-cheat-sheet
@@ -32,6 +33,23 @@ export const structure: StructureResolver = (S) =>
               S.documentTypeListItem("post").title("Posts"),
               S.documentTypeListItem("category").title("Categories"),
               S.documentTypeListItem("author").title("Authors"),
+            ]),
+        ),
+      S.divider(),
+      S.listItem()
+        .title("Settings")
+        .child(
+          S.list()
+            .title("Settings")
+            .items([
+              S.listItem()
+                .title("Social Links")
+                .icon(LinkIcon)
+                .child(
+                  S.document()
+                    .schemaType("socialLinks")
+                    .documentId("socialLinks"),
+                ),
             ]),
         ),
     ]);

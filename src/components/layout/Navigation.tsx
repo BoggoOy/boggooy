@@ -53,16 +53,6 @@ export default function Navigation() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/careers"
-            className={`fluid-xs uppercase tracking-widest px-5 py-2.5 transition-colors ${
-              isHome
-                ? "text-black bg-white hover:bg-gray-200"
-                : "text-white bg-neutral-900 hover:bg-neutral-700"
-            }`}
-          >
-            Join us
-          </Link>
         </div>
 
         {/* Mobile hamburger */}

@@ -1,4 +1,5 @@
 import GrainyNoiseBackground from "../components/backgrounds/GrainyNoiseBackground";
+import InvertColorText from "../components/backgrounds/Text/InvertColorText";
 import { VerticalTextCarousel } from "../components/backgrounds/Text/VerticalTextCarousel";
 import Section from "../components/ui/Section";
 import Link from "next/link";
@@ -12,24 +13,6 @@ export default function Home() {
         <div className="relative z-10 container mx-auto px-6 mix-blend-difference text-white">
           <div className="flex flex-col items-center justify-center gap-6">
             <VerticalTextCarousel />
-            <p className="text-center fluid-body max-w-xl tracking-wide">
-              An Oulu-based design and technology studio building digital
-              experiences for growing businesses.
-            </p>
-            <div className="flex gap-4 mt-4">
-              <Link
-                href="/works"
-                className="border border-white/30 fluid-xs uppercase tracking-widest px-6 py-3 hover:bg-white/10 transition-colors"
-              >
-                Our projects
-              </Link>
-              <Link
-                href="/culture"
-                className="text-black bg-white fluid-xs uppercase tracking-widest px-6 py-3 hover:bg-gray-200 transition-colors mix-blend-normal"
-              >
-                How we think
-              </Link>
-            </div>
           </div>
         </div>
       </section>

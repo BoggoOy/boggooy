@@ -15,7 +15,6 @@ const footerLinks = [
     links: [
       { label: "hello@boggo.fi", href: "mailto:hello@boggo.fi" },
       { label: "LinkedIn", href: "#" },
-      { label: "GitHub", href: "#" },
     ],
   },
 ];
@@ -34,8 +33,10 @@ export default function Footer() {
               <BoggoLogo className="h-10 w-auto" />
             </Link>
             <p className="mt-4 fluid-sm max-w-xs text-neutral-500">
-              A Finnish IT consulting startup. We build software, design
-              experiences, and help SMEs grow through technology.
+              A full-service development partner. We help small and medium-sized
+              businesses navigate the digital world by building modern,
+              human-centered software solutions. Design before tech &mdash;
+              usability and people always come first.
             </p>
           </div>
 

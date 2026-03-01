@@ -7,6 +7,7 @@ import { authorType } from "./authorType";
 import { projectType } from "./projectType";
 import { positionType } from "./positionType";
 import { benefitType } from "./benefitType";
+import { socialLinksType } from "./socialLinksType";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -17,5 +18,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     projectType,
     positionType,
     benefitType,
+    socialLinksType,
   ],
 };
