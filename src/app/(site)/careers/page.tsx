@@ -34,7 +34,7 @@ export default async function CareersPage() {
     <div className="bg-white">
       {/* Hero */}
       <section className="min-h-[70vh] flex items-center justify-center pt-32">
-        <div className="max-w-5xl mx-auto px-6 text-center">
+        <div className="w-full px-6 text-center">
           <h1 className="fluid-h1 font-bold tracking-tighter text-neutral-900 mb-6">
             Careers
           </h1>
@@ -48,7 +48,7 @@ export default async function CareersPage() {
 
       {/* Why Boggo */}
       <Section className="py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="w-full px-6">
           <p className="fluid-xs uppercase tracking-widest text-neutral-400 mb-16">
             Why Boggo
           </p>
@@ -68,13 +68,13 @@ export default async function CareersPage() {
       </Section>
 
       {/* Divider */}
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full px-6">
         <hr className="border-neutral-100" />
       </div>
 
       {/* Open positions */}
       <Section className="py-24 md:py-32">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="w-full px-6">
           <p className="fluid-xs uppercase tracking-widest text-neutral-400 mb-16">
             Open positions
           </p>

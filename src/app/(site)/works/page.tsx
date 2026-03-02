@@ -28,7 +28,7 @@ export default async function WorksPage() {
     <div className="bg-white">
       {/* Hero */}
       <section className="min-h-[70vh] flex items-center justify-center pt-32">
-        <div className="max-w-5xl mx-auto px-6 text-center">
+        <div className="w-full px-6 text-center">
           <h1 className="fluid-h1 font-bold tracking-tighter text-neutral-900 mb-6">
             Works
           </h1>
@@ -41,7 +41,7 @@ export default async function WorksPage() {
 
       {/* Category filters */}
       <Section className="pb-8">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="w-full px-6">
           <div className="flex flex-wrap gap-3">
             {categories.map((cat, i) => (
               <span
@@ -61,7 +61,7 @@ export default async function WorksPage() {
 
       {/* Project list */}
       <Section className="py-12 md:py-20">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="w-full px-6">
           <div className="space-y-0">
             {projects.map((project) => (
               <div
@@ -104,7 +104,7 @@ export default async function WorksPage() {
 
       {/* CTA */}
       <Section className="py-24 md:py-40">
-        <div className="max-w-5xl mx-auto px-6 text-center">
+        <div className="w-full px-6 text-center">
           <h2 className="fluid-h2 font-bold tracking-tighter text-neutral-900 mb-6">
             Interested in working together?
           </h2>

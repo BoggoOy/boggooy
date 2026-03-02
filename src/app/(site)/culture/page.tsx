@@ -79,7 +79,7 @@ export default function CulturePage() {
     <div className="bg-white">
       {/* Hero */}
       <section className="min-h-[70vh] flex items-center justify-center pt-32">
-        <div className="max-w-5xl mx-auto px-6 text-center">
+        <div className="w-full px-6 text-center">
           <h1 className="fluid-h1 font-bold tracking-tighter text-neutral-900 mb-6">
             Culture
           </h1>
@@ -93,7 +93,7 @@ export default function CulturePage() {
 
       {/* Our story */}
       <Section className="py-24 md:py-32">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="w-full px-6">
           <p className="fluid-xs uppercase tracking-widest text-neutral-400 mb-8">
             Our story
           </p>
@@ -117,13 +117,13 @@ export default function CulturePage() {
       </Section>
 
       {/* Divider */}
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full px-6">
         <hr className="border-neutral-100" />
       </div>
 
       {/* Values */}
       <Section className="py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="w-full px-6">
           <p className="fluid-xs uppercase tracking-widest text-neutral-400 mb-16">
             Our values
           </p>
@@ -141,13 +141,13 @@ export default function CulturePage() {
       </Section>
 
       {/* Divider */}
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full px-6">
         <hr className="border-neutral-100" />
       </div>
 
       {/* Principles */}
       <Section className="py-24 md:py-32">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="w-full px-6">
           <p className="fluid-xs uppercase tracking-widest text-neutral-400 mb-16">
             How we work
           </p>
@@ -176,7 +176,7 @@ export default function CulturePage() {
 
       {/* CTA */}
       <Section className="py-24 md:py-40">
-        <div className="max-w-5xl mx-auto px-6 text-center">
+        <div className="w-full px-6 text-center">
           <h2 className="fluid-h2 font-bold tracking-tighter text-neutral-900 mb-6">
             Want to be part of this?
           </h2>

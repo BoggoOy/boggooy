@@ -27,7 +27,7 @@ export default function Navigation() {
         isHome ? "mix-blend-difference" : ""
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+      <div className="w-full px-6 py-6 flex items-center justify-between">
         {/* Logo */}
         <Link
           href="/"

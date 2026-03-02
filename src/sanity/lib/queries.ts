@@ -60,3 +60,17 @@ export async function getBenefits() {
   const { data } = await sanityFetch({ query: BENEFITS_QUERY });
   return data;
 }
+
+// ─── Social Links ─────────────────────────────────────────────────
+
+export const SOCIAL_LINKS_QUERY = defineQuery(
+  `*[_type == "socialLinks"][0] {
+    linkedin,
+    github
+  }`,
+);
+
+export async function getSocialLinks() {
+  const { data } = await sanityFetch({ query: SOCIAL_LINKS_QUERY });
+  return data;
+}

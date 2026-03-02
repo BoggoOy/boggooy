@@ -1,7 +1,7 @@
-import GrainyNoiseBackground from "../components/backgrounds/GrainyNoiseBackground";
-import InvertColorText from "../components/backgrounds/Text/InvertColorText";
-import { VerticalTextCarousel } from "../components/backgrounds/Text/VerticalTextCarousel";
-import Section from "../components/ui/Section";
+import GrainyNoiseBackground from "@/src/components/backgrounds/GrainyNoiseBackground";
+import InvertColorText from "@/src/components/backgrounds/Text/InvertColorText";
+import { VerticalTextCarousel } from "@/src/components/backgrounds/Text/VerticalTextCarousel";
+import Section from "@/src/components/ui/Section";
 import Link from "next/link";
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
 
       {/* Services — clean minimal white */}
       <Section className="py-28 md:py-36 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="w-full px-6">
           <p className="fluid-xs uppercase tracking-widest text-neutral-400 mb-12">
             What we do
           </p>
@@ -56,7 +56,7 @@ export default function Home() {
 
       {/* CTA — clean minimal */}
       <Section className="py-28 md:py-44 bg-white">
-        <div className="max-w-5xl mx-auto px-6 text-center">
+        <div className="w-full px-6 text-center">
           <h2 className="fluid-h2 font-bold tracking-tighter text-neutral-900 mb-6">
             Let&apos;s create something meaningful
           </h2>
