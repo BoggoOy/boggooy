@@ -1,8 +1,7 @@
 import GrainyNoiseBackground from "@/src/components/backgrounds/GrainyNoiseBackground";
-import InvertColorText from "@/src/components/backgrounds/Text/InvertColorText";
 import { VerticalTextCarousel } from "@/src/components/backgrounds/Text/VerticalTextCarousel";
 import Section from "@/src/components/ui/Section";
-import Link from "next/link";
+import OpenPanelButton from "@/src/components/ui/OpenPanelButton";
 
 export default function Home() {
   return (
@@ -65,12 +64,9 @@ export default function Home() {
             IT consulting — we help Finnish businesses move forward with
             confidence.
           </p>
-          <Link
-            href="mailto:hello@boggo.fi"
-            className="inline-block bg-neutral-900 text-white fluid-xs uppercase tracking-widest px-8 py-4 hover:bg-neutral-700 transition-colors"
-          >
+          <OpenPanelButton className="inline-block bg-neutral-900 text-white fluid-xs uppercase tracking-widest px-8 py-4 hover:bg-neutral-700 transition-colors">
             Start a conversation
-          </Link>
+          </OpenPanelButton>
         </div>
       </Section>
     </div>
